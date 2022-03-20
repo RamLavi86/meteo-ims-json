@@ -1,0 +1,33 @@
+[
+{
+    "_id": "585b544f5c86b6c8537c34d6",
+    "topic": "Humidity",
+    "message": 1,
+	"cool" : "NaN",
+    "when": "2016-12-22T04:19:27.000Z"
+}, {
+    "_id": "585b54505c86b6c8537c34d7",
+    "topic": "Humidity",
+    "message": 2,
+	"cool" : 3.4,
+    "when": "2016-12-22T04:19:28.000Z"
+}, {
+    "_id": "585b54515c86b6c8537c34d8",
+    "topic": "Humidity",
+    "message": 2.5,
+	"cool" : 3.4,
+    "when": "2016-12-22T04:19:29.000Z"
+}, {
+    "_id": "585b54525c86b6c8537c34d9",
+    "topic": "Humidity",
+    "message": 4,
+	"cool" : 3.4,
+    "when": "2016-12-22T04:19:30.000Z"
+}, {
+    "_id": "585b54535c86b6c8537c34da",
+    "topic": "Humidity",
+    "message": 5,
+	"cool" : 3.4,
+    "when": "2016-12-22T04:19:31.000Z"
+}
+]
