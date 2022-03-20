@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+<canvas id="myChart" width="300%" height="100%"></canvas>
+<script>
+
+
+url1 = "https://ramlavi86.github.io/meteo-ims-json/jsonExample2.json"
+
+
+
+var labeldata = [];
+var chrtdata = [];
+var cooldata = []
+fetch(url1, { 
+  method: 'GET',
+  cache: 'no-store'
+})
+.then(function(response) { return response.json(); })
+.then(function(json) {
+  //console.log(json[0])
+  for(var i =0; i < json.length; i++)
+	{
+		labeldata.push(json[i].when);
+		chrtdata.push(json[i].message);
+		cooldata.push(json[i].cool);
+		
+	}
+	console.log(chrtdata)
+	var ctx = document.getElementById("myChart").getContext("2d");
+	var myChart = new Chart(ctx, {
+		type: 'line',
+		data: {
+			labels: labeldata,
+			datasets: [
+						{
+							label: 'Humidity',
+							data: chrtdata,
+							backgroundColor: "rgba(153,255,51,0.6)"
+						},
+						{
+							label: 'Cool',
+							data: cooldata,
+							backgroundColor: "rgba(25,25,251,0.6)"
+						}
+			]
+		}
+	});
+});
+
+
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 10px; width: 50%;"></div>
+</body>
+</html>
